@@ -1,0 +1,27 @@
+@import "../../assets/scss_styles/global-imports";
+
+.section_title {
+   font-size: 3.5rem;
+   text-transform: uppercase;
+   @include flex-center;
+   gap: 1rem;
+   padding: 2rem 0;
+
+   @include _576 {
+      font-size: 1.8rem;
+      gap: .1rem;
+      padding: 1rem 0 0;
+   }
+
+   & .section_title_letter {
+      background: $clr_main_transparent;
+      color: $clr_main;
+      border-radius: .5rem;
+      padding: .2rem 1rem;
+
+      @include _576 {
+         padding: .2rem .5rem;
+         transform: scaleY(1.5);
+      }
+   }
+}

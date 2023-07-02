@@ -1,0 +1,27 @@
+@import "../../assets/scss_styles/global-imports";
+
+.review_card {
+   height: 25rem;
+   gap: 4rem;
+
+   .emoji {
+      font-size: 4rem;
+   }
+
+   .review_user_name {
+      font-size: 2rem;
+      text-transform: capitalize;
+   }
+
+
+   .review_text {
+      max-height: 20rem;
+      white-space: wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &::first-letter {
+         text-transform: capitalize;
+      }
+   }
+}

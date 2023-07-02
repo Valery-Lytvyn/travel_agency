@@ -1,0 +1,63 @@
+@import "../../assets/scss_styles/global-imports";
+
+.offer_card {
+   max-width: 30rem;
+   border-radius: .5rem;
+   overflow: hidden;
+   box-shadow: 0 .2rem 1rem $clr_gray;
+
+   @include _576 {
+      min-width: 100%;
+   }
+
+   .offer_image {
+      height: 25rem;
+      width: 30rem;
+      overflow: hidden;
+
+      @include _576 {
+         height: 30rem;
+         width: 100%;
+      }
+   }
+
+   .offer_details {
+      @include flex-column;
+      gap: 1rem;
+      padding: 1.5rem;
+      color: $clr_gray;
+
+      .offer_city {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+
+         .pin_image {
+            width: 1.6rem;
+            height: 1.6rem;
+         }
+
+         .offer_city_name {
+            font-size: 2rem;
+         }
+      }
+
+      .offer_price {
+         display: flex;
+         align-items: flex-end;
+         gap: 1rem;
+         font-size: 2rem;
+
+         .offer_old_price {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: $clr_light_gray;
+         }
+      }
+
+      .text_button {
+         width: 15rem;
+         max-width: 100%;
+      }
+   }
+}

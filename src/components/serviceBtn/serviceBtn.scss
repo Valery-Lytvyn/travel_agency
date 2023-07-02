@@ -1,0 +1,11 @@
+@import "../../assets/scss_styles/global-imports";
+
+.service_btn {
+   width: 2.5rem;
+   height: 2.5rem;
+   filter: invert(97%) sepia(0%) saturate(11%) hue-rotate(39deg) brightness(103%) contrast(100%);
+
+   &:hover {
+      filter: invert(76%) sepia(55%) saturate(4034%) hue-rotate(359deg) brightness(100%) contrast(106%);
+   }
+}

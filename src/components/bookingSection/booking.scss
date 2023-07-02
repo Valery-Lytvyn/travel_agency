@@ -1,0 +1,17 @@
+@import "../../assets/scss_styles/global-imports";
+
+.booking_content {
+   width: 100%;
+   @include flex-center-vert;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   padding: 1rem;
+
+   @include _576 {
+      @include flex-center-column;
+   }
+
+   .booking_image {
+      flex: 1;
+   }
+}

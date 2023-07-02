@@ -1,0 +1,13 @@
+@import '../../assets/scss_styles/global-imports';
+
+.error_page {
+   @include flex-column;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+
+   .error_page_body {
+      @include flex-center-column;
+      flex: 1;
+   }
+}

@@ -1,0 +1,37 @@
+@import "../../../assets/scss_styles/global-imports";
+
+.search_bar_container {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100%;
+   padding: 1.5rem 2rem;
+   border-top: 1px solid $clr_light_gray;
+   @include flex-center-vert;
+   gap: .5rem;
+   background: $clr_main;
+
+
+   .search_bar {
+      width: 100%;
+      padding: 1rem;
+      border-radius: .5rem;
+      font-size: 1.7rem;
+      color: $clr_gray;
+
+      &::placeholder {
+         color: $clr_gray;
+      }
+   }
+
+   .search_bar_error::placeholder {
+      color: red;
+   }
+
+
+   .service_btn:hover {
+      filter: invert(18%) sepia(2%) saturate(4%) hue-rotate(8deg) brightness(100%) contrast(93%);
+   }
+
+
+}

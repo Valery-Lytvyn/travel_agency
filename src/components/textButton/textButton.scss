@@ -1,0 +1,17 @@
+@import "../../assets//scss_styles/global-imports";
+
+.text_button {
+   width: 100%;
+   background: $clr_main;
+   color: $clr_white;
+   padding: 1rem;
+   font-size: 1.7rem;
+   text-transform: capitalize;
+   text-align: center;
+
+   &:hover {
+      color: $clr_main;
+      background: $clr_main_transparent;
+      cursor: pointer;
+   }
+}

@@ -1,0 +1,65 @@
+@import "../../assets/scss_styles/global-imports";
+
+.login_form {
+   border-radius: 1rem;
+   background: $clr_white;
+   @include flex-center-column;
+   gap: .5rem;
+   width: 100%;
+   margin-top: 2rem;
+
+   .login_form_input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.7rem;
+      color: $clr_gray;
+      border: 1px solid $clr_light_gray;
+
+      &:focus {
+         border-color: $clr_main;
+      }
+   }
+
+   .checkbox_wrap {
+      width: 100%;
+      align-self: flex-start;
+      margin: 1rem 0;
+
+      .remember_label {
+         font-size: 1.5rem;
+         padding-left: .5rem;
+         text-transform: capitalize;
+      }
+   }
+}
+
+.login_questions {
+   align-self: flex-start;
+   font-size: 1.5rem;
+   color: #333;
+
+
+   .question {
+      display: flex;
+      margin: 1rem 0;
+
+      & p::first-letter {
+         text-transform: capitalize;
+      }
+
+      .question_link {
+         padding-left: .5rem;
+         color: $clr_main;
+
+         &::first-letter {
+            text-transform: capitalize;
+         }
+
+         &:hover {
+            color: $clr_gray;
+            text-decoration: underline;
+            cursor: pointer;
+         }
+      }
+   }
+}

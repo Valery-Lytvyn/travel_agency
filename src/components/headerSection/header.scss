@@ -1,0 +1,56 @@
+@import "../../assets/scss_styles/global-imports";
+
+.header {
+   width: 100%;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+
+   .header_visible {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 5%;
+      cursor: pointer;
+      background: $clr_gray;
+      z-index: 1000;
+
+      .logo {
+         order: 0;
+         position: relative;
+         font-size: 2.5rem;
+         font-weight: 700;
+         color: $clr_white;
+         text-transform: uppercase;
+         background: $clr_gray;
+
+         @include _768 {
+            order: 1;
+         }
+
+         & span {
+            color: $clr_main;
+         }
+
+         & ::first-letter {
+            text-transform: lowercase;
+            color: $clr_main !important;
+         }
+      }
+
+      .service_buttons {
+         order: 2;
+         width: fit-content;
+         height: 100%;
+         @include flex-center;
+         gap: .5rem;
+      }
+   }
+
+   .header_hidden {
+      width: 100%;
+   }
+}

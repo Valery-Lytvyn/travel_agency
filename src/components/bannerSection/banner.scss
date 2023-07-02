@@ -1,0 +1,77 @@
+@import "../../assets/scss_styles/global-imports";
+
+.banner {
+   position: relative;
+   @include flex-center;
+   width: 100%;
+   min-width: 100vw;
+   min-height: 115vh;
+   flex: 1;
+
+   @include _576 {
+      min-width: 100%;
+      min-height: 60vh;
+   }
+
+   .banner_content {
+      @include flex-center-column;
+      gap: 2rem;
+      text-shadow: 0 4.8px 8px rgba(0, 0, 0, .1);
+      color: $clr_white;
+
+      .banner_title {
+         font-size: 4.5rem;
+         text-transform: uppercase;
+         text-align: center;
+
+         @include _576 {
+            font-size: 2rem;
+            color: $clr_main;
+         }
+      }
+
+      .banner_motto {
+         font-size: 2.5rem;
+         padding: .5rem 5rem;
+         text-transform: capitalize;
+         text-align: center;
+
+         @include _576 {
+            padding: .5rem;
+            font-size: 1.5rem;
+            color: $clr_main;
+            font-weight: 600;
+            text-shadow: 0 4.8px 8px rgba(0, 0, 0, .1);
+         }
+      }
+
+      .text_button {
+         width: fit-content;
+         padding: 1rem 3rem;
+      }
+   }
+
+   .banner_video_container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+
+      & iframe {
+         left: 0;
+         top: 0;
+         height: 100%;
+         width: 100%;
+         position: absolute;
+         object-fit: cover;
+
+         @include _576 {
+            height: auto;
+            min-height: 45vh;
+         }
+      }
+   }
+}

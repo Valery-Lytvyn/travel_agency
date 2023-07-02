@@ -1,0 +1,27 @@
+@import "../../assets/scss_styles/global-imports";
+
+.gallery_card {
+   position: relative;
+   overflow: hidden;
+
+   .hidden_description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include flex-center-column;
+      gap: 2rem;
+      background: $clr_light_gray;
+      color: $clr_white;
+
+      .description_title {
+         font-size: 2rem;
+         text-transform: capitalize;
+      }
+
+      .text_button {
+         width: 14rem;
+      }
+   }
+}

@@ -1,0 +1,12 @@
+@import "../../assets/scss_styles/global-imports";
+
+.service_card {
+   &:hover img {
+      transform: scale(1.1);
+   }
+
+   .service_logo {
+      width: 3rem;
+      height: 3rem;
+   }
+}
