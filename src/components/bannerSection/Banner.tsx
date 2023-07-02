@@ -1,24 +1,33 @@
-import { useState } from "react";
-import YouTube, { Options } from "react-youtube";
+import { useState, useEffect } from "react";
+import YouTube from "react-youtube";
 import bannerPhoto from "../../assets/images/banner_photo.webp";
 import LazyImage from "../lazyImage/LazyImage";
 import TextButton from "../textButton/TextButton";
 import { YOUTUBE_ID } from "../../constant/urls";
 import "./banner.scss";
 
+interface Options {
+  playerVars: {
+    autoplay: 0 | 1 | undefined;
+    controls: 0 | 1 | undefined;
+    mute: 0 | 1 | undefined;
+    loop: 0 | 1 | undefined;
+  };
+}
 function Banner() {
-  const [showVideo, setShowVideo] = useState(true);
+  const [showVideo, setShowVideo] = useState(false);
   const videoOptions: Options = {
     playerVars: {
       autoplay: 1,
       controls: 0,
-      rel: 0,
-      showinfo: 0,
       mute: 1,
       loop: 1,
-      modestbranding: 1,
     },
   };
+
+  useEffect(() => {
+    setShowVideo(true);
+  }, []);
 
   const handleVideoError = () => {
     setShowVideo(false);
